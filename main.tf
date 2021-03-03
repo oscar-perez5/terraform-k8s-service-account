@@ -6,6 +6,6 @@ resource "kubernetes_service_account" "krollege" {
 
 data "kubernetes_secret" "krollege" {
   metadata {
-    name = "${kubernetes_service_account.krollege.default_secret_name}"
+    name = kubernetes_service_account.krollege.default_secret_name
   }
 }

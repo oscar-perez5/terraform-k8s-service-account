@@ -1,3 +1,4 @@
 output "token" {
-  value = "${lookup(data.kubernetes_secret.krollege.data, "token")}"
+  value     = lookup(data.kubernetes_secret.krollege.data, "token")
+  sensitive = true
 }
